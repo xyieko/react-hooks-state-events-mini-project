@@ -10,7 +10,7 @@ test("calls the onTaskFormSubmit callback prop when the form is submitted", () =
     <NewTaskForm categories={CATEGORIES} onTaskFormSubmit={onTaskFormSubmit} />
   );
 
-  fireEvent.change(screen.queryByLabelText(/Details/), {
+  fireEvent.change(screen.getByLabelText(/Details/), {
     target: { value: "Pass the tests" },
   });
 
